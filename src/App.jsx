@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+// import Navbar from './components/Navbar/Navbar'; // Remove this line
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
@@ -16,7 +16,7 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <Sidebar />
-        <Navbar />
+        {/* <Navbar /> Remove this line */}
         <main className="main-content">
           <Home />
           <About />
