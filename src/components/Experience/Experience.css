@@ -1,0 +1,143 @@
+.experience {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #e0e0e0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #007bff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  width: calc(50% - 30px);
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 50%;
+  margin-left: 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 0;
+  margin-right: 30px;
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.role {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  display: block;
+  font-size: 1.1rem;
+  color: #007bff;
+  margin-bottom: 0.3rem;
+}
+
+.period {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  list-style-type: none;
+  padding: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.achievements li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item::before {
+    left: 30px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    left: 0;
+  }
+}

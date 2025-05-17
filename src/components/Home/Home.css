@@ -1,0 +1,138 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: monospace;
+  color: #666;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background-color: #646cff;
+  color: #ffffff;
+  border: none;
+}
+
+.cta-button.primary:hover {
+  background-color: #4f57cc;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+}
+
+.cta-button.secondary:hover {
+  background-color: #646cff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+
+  .home-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .cta-button.primary {
+    background-color: #646cff;
+    color: #ffffff;
+    border: none;
+  }
+
+  .cta-button.primary:hover {
+    background-color: #4f57cc;
+    transform: translateY(-2px);
+  }
+
+  .cta-button.secondary {
+    background-color: transparent;
+    color: #646cff;
+    border: 2px solid #646cff;
+  }
+
+  .cta-button.secondary:hover {
+    background-color: #646cff;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}

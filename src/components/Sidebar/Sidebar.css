@@ -1,0 +1,253 @@
+:root {
+  --sidebar-width: 250px;
+  --sidebar-collapsed-width: 60px;
+  --transition-speed: 0.3s;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg-light);
+  transition: all var(--transition-speed) ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: var(--sidebar-width);
+    top: 60px;
+    height: calc(100vh - 60px);
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .App {
+    padding-left: 0;
+  }
+
+  .sidebar-toggle {
+    top: 10px;
+    right: -40px;
+  }
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.dark-mode .sidebar {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--sidebar-bg-light);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .sidebar-toggle {
+  background-color: var(--sidebar-bg-dark);
+}
+
+.toggle-icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-color-light);
+  transition: all var(--transition-speed) ease;
+}
+
+.dark .toggle-icon {
+  background-color: var(--text-color-dark);
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: inherit;
+  transition: all var(--transition-speed) ease;
+}
+
+.toggle-icon::before {
+  top: -6px;
+}
+
+.toggle-icon::after {
+  bottom: -6px;
+}
+
+.sidebar-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-content {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sidebar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.profile-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--hover-color-light);
+}
+
+.dark .profile-image {
+  border-color: var(--hover-color-dark);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+}
+
+.dark .profile-name {
+  color: var(--text-color-dark);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  color: var(--text-color-light);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item svg {
+  font-size: 1.2em;
+  transition: transform var(--transition-speed) ease;
+}
+
+.dark .nav-item {
+  color: var(--text-color-dark);
+}
+
+.nav-item:hover {
+  background-color: rgba(100, 108, 255, 0.15);
+  color: var(--hover-color-light);
+  transform: translateX(5px);
+}
+
+.nav-item:hover svg {
+  transform: scale(1.1);
+}
+
+.dark .nav-item:hover {
+  background-color: rgba(124, 130, 255, 0.15);
+  color: var(--hover-color-dark);
+}
+
+.nav-item.active {
+  background-color: var(--hover-color-light);
+  color: white;
+}
+
+.dark .nav-item.active {
+  background-color: var(--hover-color-dark);
+  color: white;
+}
+
+.theme-toggle {
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.theme-toggle-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--hover-color-light);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.dark .theme-toggle-button {
+  background-color: var(--hover-color-dark);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    right: -45px;
+  }
+}
