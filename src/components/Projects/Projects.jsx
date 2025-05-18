@@ -5,12 +5,13 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Project One',
-      description: 'A modern web application built with React and Node.js',
-      image: '/project1.png', // PrepWise AI Interview Practice platform image
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      liveLink: 'https://ai-assistance-interview-6454.vercel.app',
-      githubLink: 'https://github.com/awalahimed/ai_assistance.git'
+      title: 'Digital exit management system',
+      description: 'this is a digital exit managment  system for students to manage their leave request ,to approve and track their leave status in real time through online',
+      image: '/leave.png',
+      technologies: ['html', 'js','css and bootstrap', 'mysql'],
+      liveLink: 'https://',
+      githubLink: 'https://github.com/awalahimed/dg-exit-system.git'
+    
     },
     {
       id: 2,
@@ -19,25 +20,26 @@ const Projects = () => {
       image: '/project2.png',
       technologies: ['Html/Css','  ', 'Php',' ', 'Mysql'],
       liveLink: 'https://chatnibss.ct.ws/index.php',
-      githubLink: 'https://github.com/yourusername/project2'
+      githubLink: 'https://github.com/awalahimed/video-learning-platform.git'
     },
     {
       id: 3,
-      title: 'Project Three',
-      description: 'Mobile-responsive dashboard with data visualization',
-      image: '/project3.jpg',
-      technologies: ['React', 'D3.js', 'Firebase'],
-      liveLink: 'https://chatnib.free.nf',
-      githubLink: 'https://github.com/yourusername/project3'
+        title: 'Interview practice platform',
+      description: 'this is a platform that helps students to practice their interview skills by providing them with AI-generated questions and answers',
+      image: '/project1.png', // PrepWise AI Interview Practice platform image
+      technologies: ['React', 'Node.js', 'MongoDB'],
+      liveLink: 'https://ai-assistance-interview-6454.vercel.app',
+      githubLink: 'https://github.com/awalahimed/ai_assistance.git'
+      
     },
     {
       id: 4,
-      title: 'Project four',
-      description: 'Mobile-responsive dashboard with data visualization',
-      image: '/project4.jpg',
-      technologies: ['React', 'D3.js', 'Firebase'],
-      liveLink: 'https://project3.com',
-      githubLink: 'https://github.com/yourusername/project4'
+      title: 'Student discussion chat app',
+      description: 'this is a chat app for students to discuss their projects,assignment and share ideas with out internet',
+      image: '/chat1.png',
+      technologies: ['html', 'css and bootstrap','js', 'mysql'],
+      liveLink: 'https://chatnib.free.nf',
+      githubLink: 'https://github.com/awalahimed/chat.git'
     }
   ];
 
